@@ -1,0 +1,11 @@
+name = "habit-close-worker"
+main = "src/index.js"
+compatibility_date = "2024-07-01"
+account_id = "1746e3eece37c72ab46bee9426971719"
+
+# Secrets (dashboard or wrangler secret put):
+#   TODOIST_API_KEY
+#   WEBHOOK_SECRET (optional)
+#   SLACK_BOT_TOKEN (optional until set; Slack skipped until present)
+# Vars optional:
+#   SLACK_CHANNEL_ID (default C0BH8VD2QU8 = #todoist-automation)

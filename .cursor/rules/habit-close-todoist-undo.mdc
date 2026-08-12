@@ -1,0 +1,23 @@
+---
+description: HARD GATE for Notion↔Todoist habit-close. Undo + Todoist view proof before Done.
+globs: habit-close-worker/**,scripts/habit-*.sh,skills/habit-close/**
+alwaysApply: true
+---
+
+# Habit-close Todoist undo
+
+Canon: `habit-close-worker/README.md` + `scripts/habit-close-smoke.sh`.
+
+## Root (do not re-learn the soft way)
+
+Soft README gates failed 5 times. Agents proved Slack with `/close`, then claimed Done without a fresh Todoist view. Worse: `td task update --due … --json` **wipes due**. Smoke that trusts update JSON is a false PASS / silent destroy.
+
+## HARD GATE
+
+1. Slack face/icon/username: `bash scripts/habit-slack-display-smoke.sh` only. **No** `/close`. **No** Todoist.
+2. Close path proof: **only** `bash scripts/habit-close-smoke.sh <habit>`. Never ad-hoc `curl …/close`.
+3. Before Done on any habit-close cook (including Slack-only if you touched Todoist): `bash scripts/habit-todoist-audit.sh` and show **AUDIT PASS**. Prefer scoped: `bash scripts/habit-todoist-audit.sh workout`.
+4. PASS means `td task view` shows `checked is False`, due date+string intact, recurring true. Never trust `td … --json` update bodies.
+5. Never `td task update … --json`.
+
+If audit FAIL: restore same turn, then re-audit. Chat Done without view proof = gate fail.

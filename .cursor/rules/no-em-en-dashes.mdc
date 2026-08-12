@@ -1,0 +1,10 @@
+---
+description: Hard gate. No em or en dashes in chat, files, commits, or logs.
+alwaysApply: true
+---
+
+# No em or en dashes
+
+Never use em dashes (U+2014) or en dashes (U+2013). Use periods, commas, colons, or a new sentence.
+
+Before any send or file write, scan the full text for both characters. Hit = rewrite and rescan. Zero hits required.

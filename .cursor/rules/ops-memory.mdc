@@ -1,0 +1,16 @@
+---
+description: In-repo ops memory. Reinforces global User Rule 16951608.
+alwaysApply: true
+---
+
+# Ops memory (this repo)
+
+Owner: `MEMORIES.md`. Not personal Hot. Not the Cloudflare dashboard.
+
+Global rule: every repo does this. Local reinforce for this Worker.
+
+After any deploy, route add/change, or secret change: update `MEMORIES.md` + `README.md` same turn. Include live Base URL, paths, task ids, Version ID, smoke one-liner.
+
+Before overwrite deploy: compare live routes (GET `/` or `workers_get_worker_code`) to git. If Notion depends on a path missing from git, stop and restore it first.
+
+Personal `MEMORIES.md` may hold one pointer only when cross-cutting. Full contract stays here.

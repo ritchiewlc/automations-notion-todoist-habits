@@ -1,0 +1,10 @@
+---
+description: Skip geo-blocked Anthropic and OpenAI consumer products in HK.
+alwaysApply: true
+---
+
+# HK tool vetting
+
+Skip Anthropic (Claude Code, Claude app) and OpenAI (Codex CLI, ChatGPT) products. Both are geo-blocked in Hong Kong.
+
+Prefer HK-reachable CLIs and skills: ntn, td, airtable-mcp, discord, gws, airwallex, vercel, gh, raindrop MCP, and project-local skills.

@@ -1,0 +1,4 @@
+{
+  "install": "npm install -g wrangler@4.121.0 --prefix \"$HOME/.local\" && export PATH=\"$HOME/.local/bin:$PATH\" && wrangler --version",
+  "terminals": []
+}
